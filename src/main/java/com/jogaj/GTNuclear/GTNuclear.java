@@ -25,7 +25,7 @@ import org.apache.logging.log4j.Logger;
 @Mod(GTNuclear.MOD_ID)
 public class GTNuclear {
 
-    public static final String MOD_ID = "GTNuclear";
+    public static final String MOD_ID = "gtnuclear";
     public static final Logger LOGGER = LogManager.getLogger();
     public static GTRegistrate REGISTRATE = GTRegistrate.create(GTNuclear.MOD_ID);
 

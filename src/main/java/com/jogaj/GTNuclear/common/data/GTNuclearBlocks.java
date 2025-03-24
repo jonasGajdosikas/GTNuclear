@@ -29,7 +29,7 @@ public class GTNuclearBlocks {
 
     public static final BlockEntry<ModeratorBlock> MODERATOR_WATER = createModeratorBlock(ModeratorBlock.ModeratorType.WATER);
 
-    private static BlockEntry<ModeratorBlock> createModeratorBlock(IModeratorType moderatorType){
+    private static BlockEntry<ModeratorBlock> createModeratorBlock(@SuppressWarnings("SameParameterValue") IModeratorType moderatorType){
         BlockEntry<ModeratorBlock> moderatorBlock = REGISTRATE
                 .block("%s_moderator_block".formatted(moderatorType.getName()),p-> new ModeratorBlock(p, moderatorType))
                 .initialProperties(() -> Blocks.IRON_BLOCK)
