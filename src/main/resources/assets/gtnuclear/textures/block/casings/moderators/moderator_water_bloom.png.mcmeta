@@ -1,0 +1,9 @@
+{
+  "ldlib": {
+    "connection": "gtnuclear:block/casings/moderators/moderator_water_bloom_ctm",
+    "emissive": true
+  },
+  "shimmer": {
+    "bloom": true
+  }
+}
