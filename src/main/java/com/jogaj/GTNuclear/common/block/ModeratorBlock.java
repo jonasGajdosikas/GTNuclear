@@ -42,7 +42,7 @@ public class ModeratorBlock extends ActiveBlock{
 
     @Getter
     public enum ModeratorType implements StringRepresentable,IModeratorType{
-        WATER("water", .1, 700 , GTNuclear.resourceLocation("block/casings/moderators/moderator_water"));
+        WATER("water", .1, 700 , GTNuclear.resourceLocation("block/casings/moderators/moderator_water.png"));
 
         @NotNull
         private final String name;

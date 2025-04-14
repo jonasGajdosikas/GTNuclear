@@ -52,7 +52,7 @@ public class GTNuclearBlocks {
         return (ctx, prov) -> {
             ActiveBlock block = ctx.getEntry();
             ModelFile inactive = prov.models().cubeAll(name, moderatorType.getTexture());
-            ModelFile active = prov.models().withExistingParent(name + "_active", GTCEu.id("block/cube_2_layer/all"))
+            ModelFile active = prov.models().withExistingParent(name + "_active", GTNuclear.resourceLocation("block/cube_2_layer/all"))
                     .texture("bot_all", moderatorType.getTexture())
                     .texture("top_all", moderatorType.getTexture().withSuffix("_bloom"));
             prov.getVariantBuilder(block)

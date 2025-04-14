@@ -6,13 +6,6 @@ plugins {
     id 'com.diffplug.spotless' version '7.0.2'
 }
 
-def generatedResources = file("src/generated")
-
-sourceSets {
-    main {
-        resources.srcDir generatedResources
-    }
-}
 
 repositories {
     mavenLocal()
@@ -106,6 +99,7 @@ minecraft {
 apply from: "$rootDir/gradle/scripts/spotless.gradle"
 
 dependencies {
+    //noinspection VulnerableLibrariesLocal
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     // JEI, EMI, Jade

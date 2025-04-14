@@ -21,6 +21,7 @@ public class GTNuclearAddon implements IGTAddon {
     @Override
     public void initializeAddon() {
         GTNuclearBlocks.init();
+        GTNuclear.REGISTRATE.registerRegistrate();
     }
 
     @Override
