@@ -33,10 +33,10 @@ public class ModeratorBlock extends ActiveBlock{
         if (GTUtil.isShiftDown()) {
             int conversion = (int)(moderatorType.getFastNeutronConversion() * 100);
             int maxTemp = moderatorType.getMaxTemp();
-            tooltip.add(Component.translatable("block.nukeBoiler.moderator.tooltip_conversion", conversion));
-            tooltip.add(Component.translatable("block.nukeBoiler.moderator.tooltip_max_temp", maxTemp));
+            tooltip.add(Component.translatable("block.gtnuclear.moderator.tooltip_conversion", conversion));
+            tooltip.add(Component.translatable("block.gtnuclear.moderator.tooltip_max_temp", maxTemp));
         } else {
-            tooltip.add(Component.translatable("block.nukeBoiler.moderator.tooltip_extended_info"));
+            tooltip.add(Component.translatable("block.gtnuclear.moderator.tooltip_extended_info"));
         }
     }
 

@@ -33,7 +33,7 @@ public class GTNuclearBlocks {
     private static BlockEntry<ModeratorBlock> createModeratorBlock(@SuppressWarnings("SameParameterValue") IModeratorType moderatorType){
         BlockEntry<ModeratorBlock> moderatorBlock = REGISTRATE
                 .block("%s_moderator_block".formatted(moderatorType.getName()),p-> new ModeratorBlock(p, moderatorType))
-                .initialProperties(() -> Blocks.IRON_BLOCK)
+                .initialProperties(() -> Blocks.GLASS)
                 .properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
                 .addLayer(() -> RenderType::cutoutMipped)
                 .blockstate(createModeratorModel("%s_moderator_block".formatted(moderatorType.getName()), moderatorType))

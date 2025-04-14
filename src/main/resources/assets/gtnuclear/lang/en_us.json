@@ -1,5 +1,6 @@
 {
-  "block.nukeBoiler.moderator.tooltip_extended_info": "§7Hold SHIFT to show Moderator Bonus Info",
-  "block.nukeBoiler.moderator.tooltip_conversion": "Converts %s%% of fast neutrons into thermal neutrons",
-  "block.nukeBoiler.moderator.tooltip_max_temp": "Maximum safe temperature %s"
+  "block.gtnuclear.moderator.tooltip_extended_info": "§7Hold SHIFT to show Moderator Bonus Info",
+  "block.gtnuclear.moderator.tooltip_conversion": "Converts %s%% of fast neutrons into thermal neutrons",
+  "block.gtnuclear.moderator.tooltip_max_temp": "Maximum safe temperature %s",
+  "block.gtnuclear.water_moderator_block": "Light Water Moderator"
 }
