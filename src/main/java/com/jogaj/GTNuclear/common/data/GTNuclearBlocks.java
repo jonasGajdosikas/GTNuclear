@@ -1,8 +1,6 @@
 package com.jogaj.GTNuclear.common.data;
 
-import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.block.ActiveBlock;
-import com.gregtechceu.gtceu.api.item.tool.GTToolType;
 import com.gregtechceu.gtceu.common.data.GTCreativeModeTabs;
 
 import com.jogaj.GTNuclear.api.GTNuclearAPI;
@@ -11,6 +9,7 @@ import com.jogaj.GTNuclear.api.block.IModeratorType;
 import com.jogaj.GTNuclear.common.block.ModeratorBlock;
 import static com.jogaj.GTNuclear.GTNuclear.REGISTRATE;
 
+import com.jogaj.GTNuclear.common.data.recipe.GTNTags;
 import com.tterrag.registrate.providers.DataGenContext;
 import com.tterrag.registrate.providers.RegistrateBlockstateProvider;
 import com.tterrag.registrate.util.entry.BlockEntry;
@@ -25,7 +24,7 @@ import net.minecraftforge.client.model.generators.ModelFile;
 @SuppressWarnings("removal")
 public class GTNuclearBlocks {
     static {
-        REGISTRATE.creativeModeTab(() -> GTCreativeModeTabs.DECORATION);
+        REGISTRATE.creativeModeTab(() -> GTNuclearCreativeModeTabs.GTNuclear);
     }
 
     public static final BlockEntry<ModeratorBlock> MODERATOR_WATER = createModeratorBlock(ModeratorBlock.ModeratorType.WATER);
@@ -37,8 +36,9 @@ public class GTNuclearBlocks {
                 .properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
                 .addLayer(() -> RenderType::cutoutMipped)
                 .blockstate(createModeratorModel("%s_moderator_block".formatted(moderatorType.getName()), moderatorType))
-                .tag(GTToolType.WRENCH.harvestTags.get(0), BlockTags.MINEABLE_WITH_PICKAXE)
+                .tag(GTNTags.MINEABLE_WITH_WRENCH, BlockTags.MINEABLE_WITH_PICKAXE)
                 .item(BlockItem::new)
+                .model(NonNullBiConsumer.noop())
                 .build()
                 .register();
         GTNuclearAPI.MODERATORS.put(moderatorType, moderatorBlock);
@@ -61,5 +61,7 @@ public class GTNuclearBlocks {
         };
     }
 
-    public static final void init() {}
+    public static void init() {
+        //GTNuclear.LOGGER.info(ModeratorBlock.ModeratorType.WATER.getTexture());
+    }
 }

@@ -4,7 +4,6 @@ import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 
-import com.jogaj.GTNuclear.common.data.GTNuclearBlocks;
 import net.minecraft.data.recipes.FinishedRecipe;
 
 import java.util.function.Consumer;
@@ -20,8 +19,7 @@ public class GTNuclearAddon implements IGTAddon {
 
     @Override
     public void initializeAddon() {
-        GTNuclearBlocks.init();
-        GTNuclear.REGISTRATE.registerRegistrate();
+
     }
 
     @Override

@@ -9,6 +9,7 @@ import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 import com.gregtechceu.gtceu.api.sound.SoundEntry;
 
+import com.jogaj.GTNuclear.common.data.GTNuclearBlocks;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
@@ -30,6 +31,7 @@ public class GTNuclear {
     public static GTRegistrate REGISTRATE = GTRegistrate.create(GTNuclear.MOD_ID);
 
     public GTNuclear() {
+        GTNuclear.init();
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
@@ -47,6 +49,11 @@ public class GTNuclear {
         // If we want to use annotations to register event listeners,
         // we need to register our object like this!
         MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    private static void init(){
+        GTNuclearBlocks.init();
+        GTNuclear.REGISTRATE.registerRegistrate();
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
